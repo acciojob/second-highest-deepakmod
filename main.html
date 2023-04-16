@@ -10,18 +10,18 @@
 	<script>
 		function secondHighest(arr) {
 	      if(arr.length<=1)
-	        return "undefined";
+	        return -Infinity;
 			arr.sort((a,b) => {return a-b});
 		    for(let i=arr.length-2;i>=0;i--){
 		        if(arr[i]!=arr[arr.length-1])
 		          return arr[i];
 		      }
-		      return arr[arr.length-1];
+		      return -Infinity;
 		}
 
 		function Main() {
 			var n = prompt("Enter the number of elements");
-			var arr = [];
+			var arr = []; 
 			for (var i = 0; i < n; i++) {
 				arr[i] = prompt("Enter element " + (i+1));
 			}
